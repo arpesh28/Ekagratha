@@ -1,0 +1,59 @@
+    <div class="d-flex justify-content-center">
+        <div class="dashboard text-center p-4" >
+            <h2 class="welcome-text">Welcome to Ekagratha, <span class="span-text">{{user.firstName}}</span></h2>
+            <div class="line"></div>
+                <div class="row">
+                        <div class="col-4 ">
+                            <div class="custom-card card-1 ">
+                            <div class=" d-flex align-items-center justify-content-center body-card align-center">
+                                <h2 class="heading-number float-left card-title text-left">1</h2>
+                                <p class="text-left text-wrap">Enter new Task</p>
+                            </div>
+                            </div>
+                        </div>
+                          <div class="col-4">
+                            <div class="custom-card card-1 ">
+                            <div class=" d-flex align-items-center justify-content-center body-card align-center">
+                                <h2 class="heading-number float-left card-title text-left">2</h2>
+                                <p class="text-left text-wrap">Set Deadline</p>
+                            </div>
+                            </div>
+                        </div>
+                          <div class="col-4">
+                            <div class="custom-card card-1 ">
+                            <div class=" d-flex align-items-center justify-content-center body-card align-center">
+                                <h2 class="heading-number float-left card-title text-left">3</h2>
+                                <p class="text-left text-wrap">Finish task & tick off</p>
+                            </div>
+                            </div>
+                        </div>
+                </div> 
+                <div class="dashboard-tasks">
+                    <h2 class="welcome-text">Upcoming Tasks</h2>
+                    <p class="dashboard-subtext text-wrap">Check out any upcoming tasks and recent <br> projects below!</p>
+                
+                <div class="line"></div>
+                <div class="row d-flex  align-items-center justify-content-center">
+                {{#each tasks}}
+                    <div class="col-3">
+                        <a href="#">
+                            <div class="custom-card">
+                                <div class="date-time">
+                                    <div>{{task.date}}</div>
+                                    <div>{{task.time}}</div>
+                                </div>
+                                <div class="content-task">
+                                    <h4>{{task.title}}</h4>
+                                    <p>{{task.description}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {{else}}
+                    <p class="span-text">No task appointed</p>
+                {{/each}}
+                </div>
+                </div>
+
+        </div>
+    </div>

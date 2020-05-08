@@ -1,0 +1,21 @@
+<div class="container-fluid login-page">
+    <div class=" p-5 d-flex justify-content-center flex-row">
+        <img src="/img/lotus-flower.svg" style="mx auto d-block"  height="30px">
+        <h1 class="logo d-inline pl-3">ekagratha</h1>
+    </div>
+    <div class="login-container d-flex justify-content-center flex-row">
+        <div class="login-box register-box">
+            <a href="/user/login" ><i class="fa fa-angle-left left back-btn"></i> <span class="back-btn-text"> </span></a>
+            <h3> <span class="span-text"> Hello,</span><br> we need your details.</h3>
+            <form action="/user/register" method="POST" class="form">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name" value="{{firstName}}" required> 
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name" value="{{lastName}}" required> <br>
+                <input type="email" name="email" id="email" placeholder="Email" value="{{email}}" required> <br>
+                <input type="password" name="password1" placeholder="Password" value="{{password1}}"required> <br>
+                <input type="password" name="password2" placeholder="Re-Enter Password" value="{{password2}}" required> <br>
+                <button type="submit" class="btn submit-btn buttonn">Submit</button> <br>
+                <button type="button" class="btn google-btn btn buttonn "> <img src="/img/google.svg" alt="Google" height="25px"> Register with Google</button>
+            </form>
+        </div>
+    </div>
+</div>
